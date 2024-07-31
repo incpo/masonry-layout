@@ -11,7 +11,6 @@ Remember, a little star can make a big difference!
 ```tsx
 import { images } from './config';
 
-const images = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg']
 const MAX_COLUMNS = 3
 
 function getColumns(colIndex: number) {
