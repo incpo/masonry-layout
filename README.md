@@ -35,7 +35,7 @@ function App() {
 }
 ```
 
-- Define `MAX_COLUMNS` constant
+- Define `MAX_COLUMNS` constant & change `sm:grid-cols-3` to `sm:grid-cols-{your-cols-count}`
 - Replace `images` array with any other data source
 - Replace `div` with your own component
 
