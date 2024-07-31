@@ -40,5 +40,9 @@ function App() {
 - Replace `images` array with any other data source
 - Replace `div` with your own component
 
+## Why?
+Because native CSS solution still an experimental solution and not supported by all browsers.
+![Browser compatibility](image.png)
+
 ## License
 Licensed under the [MIT license](https://github.com/incpo/masonry-layout/blob/main/LICENSE).
