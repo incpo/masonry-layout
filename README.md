@@ -1,2 +1,42 @@
-# 31-07-24-mansory-layout
-No lib open source solution to build mansory layout for you.
+# Masonry Layout
+
+This template provides simple copy paste solution to build masonry layout for you. <br/>
+No libs needed, just pure vanilla js.
+
+If this project has helped you in any way or you found it interesting, please consider giving it a star ⭐. <br/>Your support helps me continue to improve and maintain the project, and it means a lot to me!
+
+Remember, a little star can make a big difference!
+
+## Copy paste solution
+```tsx
+const images = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg']
+const MAX_COLUMNS = 3
+
+function getColumns(colIndex: number) {
+  // Instead of images you can replace it with any other data source
+  return images.filter((_, idx) => idx % MAX_COLUMNS === colIndex);
+}
+
+function App() {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {Array.from({ length: MAX_COLUMNS }, (_, colIndex) => (
+        <div key={colIndex} className="grid gap-4">
+          {getColumns(colIndex).map((image, idx) => (
+            <div key={idx} className="replace-with-your-own-component">
+              <img loading="lazy" src={image} alt={`${idx + 1}`} className="h-full w-full rounded-xl object-cover" />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+```
+
+- Define `MAX_COLUMNS` constant
+- Replace `images` array with any other data source
+- Replace `div` with your own component
+
+## License
+Licensed under the [MIT license](https://github.com/incpo/masonry-layout/blob/main/LICENSE).
