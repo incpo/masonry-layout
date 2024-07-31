@@ -9,6 +9,8 @@ Remember, a little star can make a big difference!
 
 ## Copy paste solution
 ```tsx
+import { images } from './config';
+
 const images = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg']
 const MAX_COLUMNS = 3
 
@@ -22,9 +24,9 @@ function App() {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {Array.from({ length: MAX_COLUMNS }, (_, colIndex) => (
         <div key={colIndex} className="grid gap-4">
-          {getColumns(colIndex).map((image, idx) => (
+          {getColumns(colIndex).map((img, idx) => (
             <div key={idx} className="replace-with-your-own-component">
-              <img loading="lazy" src={image} alt={`${idx + 1}`} className="h-full w-full rounded-xl object-cover" />
+              <img loading="lazy" src={img.src} height={img.height} width={img.width} alt={img.alt} className="h-full w-full object-cover" />
             </div>
           ))}
         </div>
